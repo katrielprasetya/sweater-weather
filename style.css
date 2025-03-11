@@ -2,6 +2,70 @@
     margin: 0;
 }
 
-container {
-    background-color: antiquewhite;
+
+.plus-jakarta-sans-regular {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.plus-jakarta-sans-light {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 300;
+}
+
+.plus-jakarta-sans-bold {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+}
+
+.plus-jakarta-sans-semibold {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+}
+
+.plus-jakarta-sans-extrabold {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 800;
+}
+
+.plus-jakarta-sans-medium {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+}
+
+
+.title-weather {
+    color: #FFFDEF;
+    text-align: left;
+}
+
+.temperature {
+    display: flex;
+    align-items: center; 
+    font-weight: bold;
+}
+
+.temp-number {
+    font-size: 60px;
+}
+.temp-unit {
+    font-size: 30px; 
+    top: 8px; 
+    margin-left: 5px; /* Reduce spacing */
+    display: flex;
+    align-items: flex-start;
+}
+
+.date-right {
+    font-size: 16px;
+}
+
+.terracotta {
+    color: #835a56;
+}
+
+.white {
+    color: #FFFDEF;
 }
