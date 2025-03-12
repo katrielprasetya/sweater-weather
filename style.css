@@ -43,23 +43,23 @@
 
 .temperature {
     display: flex;
-    align-items: center; 
-    font-weight: bold;
+    align-items: flex-start; 
 }
 
 .temp-number {
-    font-size: 60px;
+    font-size:40px;
+    margin: 0;
+    line-height: 1;
 }
+
 .temp-unit {
-    font-size: 30px; 
-    top: 8px; 
-    margin-left: 5px; /* Reduce spacing */
-    display: flex;
-    align-items: flex-start;
+    font-size: 15px; 
+    top: 0px;
+   
 }
 
 .date-right {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .terracotta {

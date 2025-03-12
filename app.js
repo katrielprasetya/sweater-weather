@@ -34,19 +34,38 @@ const daily = {
     const newFormat = new Date(date);
     return newFormat.toLocaleDateString('id-ID', options);
   };
-  
-  days.innerHTML = '';
-  
-  for (let i = 0; i < daily.time.length; i++) {
-    days.innerHTML += `
-      <div class="col-12 col-md-3">
-        <div class="card text-bg-light mb-3">
-          <div class="card-body">
-            <h5 class="card-title">${daily.temperature_2m[i]}</h5>
-            <p class="card-text">${formattedDate(daily.time[i])}</p>
+
+  document.addEventListener("DOMContentLoaded", function () {});
+
+const cardContainer = document.querySelector(".card-container"); 
+console.log(cardContainer)
+cardContainer.innerHTML = '';
+
+for (let i = 0; i < 6; i++) { 
+    let cardHTML = `
+      <div class="card rounded-4" style="max-width: 540px; background-color: #FFFDEF;">
+          <div class="row g-0 align-items-center" style="color: #3F3F3F;">
+              <!-- Left side: Temperature details -->
+              <div class="col-md-9">
+                  <div class="card-body">
+                      <div class="card-title text-start mb-0 plus-jakarta-sans-bold">
+                          <div class="temperature d-flex align-items-start">
+                              <span class="temp-number">25</span>
+                              <span class="temp-unit">°C</span>
+                          </div>
+                          <div class="date-right">
+                              <p class="card-text text-start plus-jakarta-sans-medium">Tue, 11 Mar</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Right side: Image -->
+              <div class="col-md-3 d-flex justify-content-end">
+                  <img src="iconoir_wind.png" class="img-fluid rounded-end me-2" width="80" alt="Weather Icon">
+              </div>
           </div>
-        </div>
       </div>
     `;
-  }
-  
+
+    cardContainer.innerHTML += cardHTML; 
+}
