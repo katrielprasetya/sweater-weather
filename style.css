@@ -46,11 +46,20 @@
 .title-weather {
     color: #FFFDEF;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
-.temperature {
-    display: flex;
-    align-items: flex-start; 
+@media (max-width: 768px) {
+    .title-weather {
+        min-height: auto;
+        padding: 10px;
+    }
+    .temperature {
+        font-size: 15vw;
+    }
 }
 
 .temp-number {
@@ -70,7 +79,7 @@
 }
 
 .search-city {
-    font-size: 60px;
+    font-size: 5vw;
 }
 
 
@@ -78,7 +87,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 200px);
+    margin-bottom: 0;
+    font-size: 5vw;
+}
+
+.humidity {
+    text-align: left;
 }
 
 .terracotta {

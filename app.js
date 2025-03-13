@@ -1,7 +1,4 @@
-/**
- * Data
- */
-const daily = {
+const date = {
     time: [
       '2025-03-11',
       '2025-03-12',
@@ -13,15 +10,7 @@ const daily = {
     ],
     temperature_2m: [25.4, 27.2, 28.9, 29.5, 30.4, 30.7, 30.8],
   };
-  
-  /**
-   * DOM Selector
-   */
-  const days = document.querySelector('#days');
-  
-  /**
-   * Functions
-   */
+
   
   const formattedDate = (date) => {
     const options = {
@@ -34,6 +23,9 @@ const daily = {
     const newFormat = new Date(date);
     return newFormat.toLocaleDateString('id-ID', options);
   };
+
+  console.log(formattedDate('2025-03-13'))
+  
 
   document.addEventListener("DOMContentLoaded", function () {});
 
@@ -69,3 +61,6 @@ for (let i = 0; i < 6; i++) {
 
     cardContainer.innerHTML += cardHTML; 
 }
+
+const URL =
+  'https://api.open-meteo.com/v1/forecast?latitude=-6.1818&longitude=106.8223&daily=weather_code,temperature_2m_max,temperature_2m_min&current=temperature_2m,wind_speed_10m,wind_direction_10m,relative_humidity_2m,weather_code';
