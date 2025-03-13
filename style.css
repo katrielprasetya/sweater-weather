@@ -35,6 +35,13 @@
     font-weight: 500;
 }
 
+.left-section {
+    background-color: #835a56; 
+}
+
+.right-section {
+    background-color: #835a56; 
+}
 
 .title-weather {
     color: #FFFDEF;
@@ -66,9 +73,12 @@
     font-size: 60px;
 }
 
-.title-weather {
+
+.temperature-display {
     display: flex;
-    align-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: calc(100vh - 180px);
 }
 
 .terracotta {
