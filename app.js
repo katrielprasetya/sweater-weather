@@ -14,14 +14,13 @@ const date = {
   
   const formattedDate = (date) => {
     const options = {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
+      weekday: 'short',
+      month: 'short',
       day: 'numeric',
     };
   
     const newFormat = new Date(date);
-    return newFormat.toLocaleDateString('id-ID', options);
+    return newFormat.toLocaleDateString('en-GB', options);
   };
 
   console.log(formattedDate('2025-03-13'))
@@ -46,7 +45,9 @@ for (let i = 0; i < 6; i++) {
                               <span class="temp-unit">°C</span>
                           </div>
                           <div class="date-right">
-                              <p class="card-text text-start plus-jakarta-sans-medium">Tue, 11 Mar</p>
+                              <p class="card-text text-start plus-jakarta-sans-medium">
+                                ${formattedDate(date.time[i])}
+                              </p>
                           </div>
                       </div>
                   </div>
