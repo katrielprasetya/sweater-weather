@@ -62,6 +62,15 @@
     font-size: 14px;
 }
 
+.search-city {
+    font-size: 60px;
+}
+
+.title-weather {
+    display: flex;
+    align-content: space-between;
+}
+
 .terracotta {
     color: #835a56;
 }
