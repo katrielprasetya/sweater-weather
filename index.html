@@ -20,8 +20,8 @@
             <!-- Bagian kiri -->
             <div class="col-6">
             <div class="title-weather container-fluid d-flex flex-column align-items-start" style="min-height: 100vh;">
-                <div class="date plus-jakarta-sans-semibold mt-4">Mon, 10 Mar</div>
-                <div class="search-city d-flex align-items-center plus-jakarta-sans-extrabold">Jakarta 
+                <div class="plus-jakarta-sans-semibold mt-4" id="date">Mon, 10 Mar</div>
+                <div class="search-city d-flex align-items-center plus-jakarta-sans-extrabold" id="city-display">Jakarta 
                     <form>
                         <div class="d-flex align-items-center input-group" id="city-name">
                           <button class="btn z-0 p-3" type="button" id="button-city" onclick="getGeocoding()">
@@ -37,22 +37,22 @@
 
                 <!-- weather details -->
                 <div class="humidity-container d-flex justify-content-start gap-3 mt-2">
-                    <div class="humidity plus-jakarta-sans-bold text-start">
+                    <div class="plus-jakarta-sans-bold text-start" id="humidity">
                         <img src=""></img> 58%
                     </div>
 
-                    <div class="wind-speed plus-jakarta-sans-bold text-start">
+                    <div class="wind-speed plus-jakarta-sans-bold text-start" id="wind-speed">
                         <img src=""></img> 2.57 KM/H
                     </div>
 
-                    <div class="temp-feel plus-jakarta-sans-bold text-start">
-                        <img src=""></img> 5%
+                    <div class="temp-feel plus-jakarta-sans-bold text-start" id="air-pressure">
+                        <img src=""></img> 1005.0 hPa
                     </div>
                 </div>
 
             <!-- temperature display bottom -->
                 <div class="temperature-display">
-                    <div class="temperature plus-jakarta-sans-extrabold">25°</div>
+                    <div class="plus-jakarta-sans-extrabold" id="temperature">25°</div>
                 </div>
                 </div>
             </div>
@@ -70,6 +70,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="wmo.js"></script>
     <script src="app.js"></script>
+    
 </body>
 </html>
