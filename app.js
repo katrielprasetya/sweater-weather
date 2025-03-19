@@ -42,8 +42,8 @@ const getWeather = async () => {
   const cardContainer = document.querySelector(".card-container"); 
   cardContainer.innerHTML = '';
   for (let i = 1; i < data.daily.time.length; i++) {
-    cardContainer.innerHTML += `<div class="card rounded-4" style="max-width: 540px; background-color: #FFFDEF;">
-          <div class="row g-0 align-items-center" style="color: #3F3F3F;">
+    cardContainer.innerHTML += `<div class="card rounded-4" style="max-width: 540px; background-color:rgb(34, 34, 34);">
+          <div class="row g-0 align-items-center" style="color:rgb(170, 170, 170);">
               <!-- Left side: Temperature details -->
               <div class="col-md-9">
                   <div class="card-body">
