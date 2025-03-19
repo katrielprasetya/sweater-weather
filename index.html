@@ -23,14 +23,13 @@
                 <div class="plus-jakarta-sans-semibold mt-4" id="date">Mon, 10 Mar</div>
                 <div class="search-city d-flex align-items-center plus-jakarta-sans-extrabold" id="city-display">Jakarta 
                 </div>
-                <form class="d-flex">
-                  <input type="text" name="" id="city-name">
-                    <div class="d-flex align-items-center input-group">
-                      <button class="btn z-0 p-3" type="button" id="button-city" onclick="getGeocoding()">
-                        <img src="akar-icons_search.png" alt="search" width="40" height="40">
-                      </button>
-                    </div>
+                <form class="d-flex input-group" style="width: 250px; height: 40px;">
+                  <input type="text" class="form-control" id="city-name" placeholder="Enter city" style="height: 100%;">
+                  <button class="btn btn-link" type="button" id="button-city" onclick="getGeocoding()">
+                      <img src="akar-icons_search.png" alt="search" width="20" height="20">
+                  </button>
                 </form>
+              
 
                 <!-- weather details -->
                 <div class="humidity-container d-flex justify-content-start gap-3 mt-2">
