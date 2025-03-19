@@ -12,7 +12,6 @@ const cityName = document.getElementById('city-name');
 const weatherIcon = document.getElementById('weather-icon');
 
 
-
 const formattedDate = (date) => {
   const options = {
     weekday: 'short',
@@ -24,10 +23,11 @@ const formattedDate = (date) => {
   return newFormat.toLocaleDateString('en-GB', options);
 };
 
+// latitude=-6.2146&longitude=106.8451
 
-const getWeather = async () => {
+const getWeather = async (latitude=-6.2146, longitude=106.8451) => {
   const WEATHER_URL = 
-  "https://api.open-meteo.com/v1/forecast?latitude=-6.2146&longitude=106.8451&daily=weather_code,apparent_temperature_max&current=temperature_2m,weather_code,wind_speed_10m,relative_humidity_2m,surface_pressure&timezone=auto"
+  `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weather_code,apparent_temperature_max&current=temperature_2m,weather_code,wind_speed_10m,relative_humidity_2m,surface_pressure&timezone=auto`
 
   const response = await fetch(WEATHER_URL);
   const data = await response.json();
@@ -37,13 +37,13 @@ const getWeather = async () => {
   humidity.innerText = data.current.relative_humidity_2m + ' %';
   airPressure.innerText = data.current.surface_pressure + ' hPa';
   windSpeed.innerText = data.current.wind_speed_10m + ' km/h';
-
-
+  description.innerText = WMO[data.current.weather_code].day.description
+  
   const cardContainer = document.querySelector(".card-container"); 
   cardContainer.innerHTML = '';
   for (let i = 1; i < data.daily.time.length; i++) {
-    cardContainer.innerHTML += `<div class="card rounded-4" style="max-width: 540px; background-color:rgb(34, 34, 34);">
-          <div class="row g-0 align-items-center" style="color:rgb(170, 170, 170);">
+    cardContainer.innerHTML += `<div class="card rounded-4 bg-black bg-gradient" style="max-width: 540px;">
+          <div class="row g-0 align-items-center" style="color: #FFFDEF;">
               <!-- Left side: Temperature details -->
               <div class="col-md-9">
                   <div class="card-body">

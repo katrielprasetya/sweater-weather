@@ -35,13 +35,13 @@
     font-weight: 500;
 }
 
-.left-section {
+/* .left-section {
     background-color: #383737; 
 }
 
 .right-section {
     background-color: #383737; 
-}
+} */
 
 .title-weather {
     color: #FFFDEF;
@@ -91,8 +91,11 @@
     font-size: 5vw;
 }
 
-.humidity {
-    text-align: left;
+.humidity-container img {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 .terracotta {

@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bebas+Neue&family=Hedvig+Letters+Serif:opsz@12..24&family=Italianno&family=Petit+Formal+Script&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid text-center my-0" style="min-height: 100vh;">
+    <div class="container-fluid text-center my-0" style="min-height: 100vh; background-size: cover; background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=3872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
         <div class="row" style="min-height: 100vh;">
           <div class="col-9 left-section">
             <!-- Bagian kiri -->
@@ -24,31 +24,38 @@
                 <div class="search-city d-flex align-items-center plus-jakarta-sans-extrabold" id="city-display">Jakarta 
                 </div>
                 <form class="d-flex input-group" style="width: 250px; height: 40px;">
-                  <input type="text" class="form-control" id="city-name" placeholder="Search city" style="height: 100%;">
-                  <button class="btn btn-link" type="button" id="button-city" onclick="getGeocoding()">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="city-name" placeholder="Search city..." aria-label="Search city.." aria-describedby="button-addon2">
+                    <button class="btn btn-dark" type="button" id="button-city" onclick="getGeocoding()">
                       <img src="akar-icons_search.png" alt="search" width="20" height="20">
-                  </button>
+                    </button>
+                  </div>
                 </form>
               
 
                 <!-- weather details -->
                 <div class="humidity-container d-flex justify-content-start gap-3 mt-2">
-                    <div class="plus-jakarta-sans-bold text-start" id="humidity">
-                    <img src="lets-icons_humidity.png" alt="humidity"></img> 58%
+                    <div class="plus-jakarta-sans-bold text-start d-flex align-items-center">
+                        <img src="lets-icons_humidity.png" alt="humidity"></img>
+                        <span id="humidity"> 58%</span>
                     </div>
 
-                    <div class="wind-speed plus-jakarta-sans-bold text-start" id="wind-speed">
-                        <img src="mi_wind.png"></img> 2.57 KM/H
+                    <div class="wind-speed plus-jakarta-sans-bold text-start d-flex align-items-center">
+                        <img src="mi_wind.png"></img>
+                        <span id="wind-speed"> 2.57 KM/H </span>
                     </div>
 
-                    <div class="temp-feel plus-jakarta-sans-bold text-start" id="air-pressure">
-                        <img src="lets-icons_pressure.png"></img> 1005.0 hPa
+                    <div class="temp-feel plus-jakarta-sans-bold text-start d-flex align-items-center">
+                        <img src="lets-icons_pressure.png"></img>
+                        <span id="air-pressure"> 1005.0 hPa </span>
                     </div>
                 </div>
 
             <!-- temperature display bottom -->
                 <div class="temperature-display">
+                  <span class="fs-5 plus-jakarta-sans-semibold" style="opacity: 100%;" id="description"> Drizzle</span>
                     <div class="plus-jakarta-sans-extrabold" id="temperature">25°</div>
+                    
                 </div>
                 </div>
             </div>
