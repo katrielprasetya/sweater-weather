@@ -106,3 +106,6 @@
     color: #FFFDEF;
 }
 
+.custom-gradient {
+    background: linear-gradient(to right, rgb(31, 32, 44), #182f4d);
+}

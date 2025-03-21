@@ -42,7 +42,7 @@ const getWeather = async (latitude=-6.2146, longitude=106.8451) => {
   const cardContainer = document.querySelector(".card-container"); 
   cardContainer.innerHTML = '';
   for (let i = 1; i < data.daily.time.length; i++) {
-    cardContainer.innerHTML += `<div class="card rounded-4 bg-black bg-gradient" style="max-width: 540px;">
+    cardContainer.innerHTML += `<div class="card rounded-4 custom-gradient" style="max-width: 540px;">
           <div class="row g-0 align-items-center" style="color: #FFFDEF;">
               <!-- Left side: Temperature details -->
               <div class="col-md-9">
