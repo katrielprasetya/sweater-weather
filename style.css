@@ -109,3 +109,19 @@
 .custom-gradient {
     background: linear-gradient(to right, rgb(31, 32, 44), #182f4d);
 }
+
+#city-display {
+    color: aliceblue;
+}
+
+#description {
+    color: aliceblue;
+}
+
+#temperature{
+    color: aliceblue;
+}
+
+.date-right {
+    color: aliceblue;
+}
